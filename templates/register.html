@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>New User Register</h1>
+    </div>
+    <div class="form-container">
+        <form method="post">
+            <input type="email" name="email" required placeholder="Enter Email">
+            <input type="password" name="password" required placeholder="Enter Password">
+            <button type="submit" class="task-btn">Register</button>
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <a href="/login">Back to login</a>
+        </form>
+    </div>
+</body>
+</html>
+
+

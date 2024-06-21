@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center-align the child elements horizontally */
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    width: 100%;
+    max-width: 600px;
+    background-color: #0077CC;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px; 
+    margin-bottom: 20px;
+}
+
+/* Container for Task List */
+.task-container {
+    width: 100%;
+    max-width: 600px;
+    background: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.task-item {
+    background: white;
+    margin: 10px 0; 
+    padding: 15px; 
+    border-radius: 6px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+    cursor: pointer;
+    position: relative; 
+}
+
+.task-status {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.task-status .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-info {
+    margin-left: 50px; /* Space for the circle */
+}
+
+.completed .task-title {
+    color: grey;
+    text-decoration: line-through;
+}
+
+.completed .circle {
+    background: green;
+    color: white;
+    border-color: green;
+}
+
+.task-btn {
+    display: block;
+    width: 130px; 
+    padding: 10px 20px;
+    background-color: #0077CC;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.delete-btn {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Container for Forms */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.form-container form {
+    text-align: center;
+}
+
+/* Input Fields */
+input[type="email"], input[type="password"], input[type="text"], textarea {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+a {
+    color: #0077CC;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+

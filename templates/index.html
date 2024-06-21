@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO Tasks</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>All Tasks</h1>
+        <a href="/logout" style="position: absolute; right: 10px; top: 10px;">Logout</a>
+    </div>
+    <div class="task-container">
+        {% for task in tasks %}
+        <div class="task-item {{ 'completed' if task.completed else '' }}">
+            <div onclick="toggleCompleted('{{ task.id }}')" class="task-status">
+                <span class="circle">{{ "√" if task.completed else "" }}</span>
+            </div>
+            <div onclick="editTask('{{ task.id }}')" class="task-info">
+                <span class="task-title">{{ task.title }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <button class="task-btn" onclick="window.location.href='/task/new'">+ Add Task</button>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
+
